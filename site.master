@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Open Computing Supplies</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet" type="text/css" />
+<link href="Styles/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../Styles/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../Styles/default.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+     <form id="form1" runat="server">
+<div id="wrapper-gradiant">
+	<div id="wrapper-bgshadow">
+		<div id="wrapper">
+			<div id="header">
+				<div id="logo">
+					<h1><a href="#"><span>Open Computing Supplies</span></a></h1>
+                    <p>&nbsp;</p>
+				</div>
+			</div>
+            <div style="height: 44px; width: 950px">
+                        <asp:Label ID="lblLoggedIn" runat="server" Text="" Visible="false" ></asp:Label>
+            <asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click" Visible="false" CausesValidation="false">Logout</asp:LinkButton>
+            </div>
+			<div id="menu-wrapper">
+				<div id="menu">
+					<ul>
+						<li><asp:LinkButton ID="lbHome" runat="server" OnClick="lbHome_Click" CausesValidation="false">Home</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbProductList" runat="server" OnClick="lbProductList_Click" CausesValidation="false">Products</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbCart" runat="server" OnClick="lbCart_Click" CausesValidation="false">Shopping Cart</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbContact" runat="server" OnClick="lbContact_Click" CausesValidation="false">Contact</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbFindUs" runat="server" OnClick="lbFindUs_Click" CausesValidation="false">Find Us</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbLogin" runat="server" OnClick="lbLogin_Click" CausesValidation="false">Login</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbManage" runat="server" OnClick="lbManage_Click" CausesValidation="false">My Account</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbUsers" runat="server" OnClick="lbUsers_Click" CausesValidation="false">Users</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbOrderManagement" runat="server" OnClick="lbOrderManagement_Click" CausesValidation="false">Orders</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbStockManagement" runat="server" OnClick="lbStockManagement_Click" CausesValidation="false">Stock</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="lbReturnManagement" runat="server" OnClick="lbReturnManagement_Click" CausesValidation="false">Product Returns</asp:LinkButton></li>
+                    </ul>
+				</div>
+			</div>
+			<div id="page">
+				<div class="bgcontent">
+					<asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>© Open Computing Supplies |&nbsp;&nbsp;2015</p>
+	</div>
+</div>
+         </form>
+</body>
+</html>
